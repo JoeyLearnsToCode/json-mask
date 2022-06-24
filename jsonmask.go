@@ -10,7 +10,7 @@ const Sep = "."
 const MaxDepth = 10
 
 type NeedMask interface {
-	// NeedMaskFields 返回需要掩码处理的字段，key是字段的path（格式： .level1.level2.filedName ），value是掩码处理器
+	// NeedMaskFields 返回需要掩码处理的字段，key是字段的path（格式： .path.to.filedName ），value是掩码处理器
 	NeedMaskFields() map[string]MaskHandler
 }
 

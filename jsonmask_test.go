@@ -23,6 +23,7 @@ type person struct {
 	Address *address `json:"address"`
 }
 
+// 一般来说，这个方法不需要和 person 类型本身位于同一个源码文件，在同一个包下即可。
 func (p *person) NeedMaskFields() map[string]MaskHandler {
 	return map[string]MaskHandler{
 		".name":             MaskHandlerFunc(Name),
